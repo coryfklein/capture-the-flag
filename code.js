@@ -496,7 +496,7 @@ function init() {
     $('.reset').bind('click', function() {
         s.redWins = false;
         s.blueWins = false;
-        json = '{ "players": [ { "id": "0", "team": "red", "x": 0.1, "y": 0.1, "hasEnemyFlag": false }, { "id": "1", "team": "red", "x": 0.1, "y": 0.5, "hasEnemyFlag": false }, { "id": "2", "team": "red", "x": 0.1, "y": 0.9, "hasEnemyFlag": false }, { "id": "3", "team": "blue", "x": 0.9, "y": 0.1, "hasEnemyFlag": false }, { "id": "4", "team": "blue", "x": 0.9, "y": 0.5, "hasEnemyFlag": false }, { "id": "5", "team": "blue", "x": 0.9, "y": 0.9, "hasEnemyFlag": false } ], "flags": [ { "id": "0", "team": "red", "x": 0.05, "y": 0.5 }, { "id": "1", "team": "blue", "x": 0.95, "y": 0.5 } ] }';
+        json = { "players": [ { "id": "0", "team": "red", "x": 0.1, "y": 0.1, "hasEnemyFlag": false }, { "id": "1", "team": "red", "x": 0.1, "y": 0.5, "hasEnemyFlag": false }, { "id": "2", "team": "red", "x": 0.1, "y": 0.9, "hasEnemyFlag": false }, { "id": "3", "team": "blue", "x": 0.9, "y": 0.1, "hasEnemyFlag": false }, { "id": "4", "team": "blue", "x": 0.9, "y": 0.5, "hasEnemyFlag": false }, { "id": "5", "team": "blue", "x": 0.9, "y": 0.9, "hasEnemyFlag": false } ], "flags": [ { "id": "0", "team": "red", "x": 0.05, "y": 0.5 }, { "id": "1", "team": "blue", "x": 0.95, "y": 0.5 } ] };
         var fb = new Firebase("https://capture-the-flag.firebaseio.com/");
         fb.set(json);
     });
